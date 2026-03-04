@@ -1,0 +1,184 @@
+* {
+    margin: 0; /* Remove margens automáticas que o navegador coloca */
+    padding: 0; /* Remove espaçamento interno padrão */
+    box-sizing: border-box; /* Faz width/height incluir padding e border */
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão */
+    background-color: #f6f6f6; /* Cor de fundo geral */
+    color: #23272a; /* Cor padrão do texto */
+}
+
+
+header {
+    background-image: url('./assets/images/tela1.png'); /* Imagem de fundo */
+    background-size: cover; /* Faz cobrir toda a área */
+    background-position: center; /* Centraliza imagem */
+    background-repeat: no-repeat; /* Não repete */
+
+    height: 100vh; /* Ocupa 100% da altura da tela */
+
+    display: flex; /* Ativa Flexbox */
+    flex-direction: column; /* Organiza em coluna */
+    justify-content: center; /* Centraliza vertical */
+    align-items: center; /* Centraliza horizontal */
+
+    text-align: center; /* Centraliza texto */
+    color: white; /* Texto branco */
+}
+
+
+header h1 {
+    font-size: 48px; /* Tamanho grande */
+    font-weight: 800; /* Negrito forte */
+    margin-bottom: 20px; /* Espaço abaixo */
+}
+
+
+header p {
+    max-width: 700px; /* Limita largura */
+    font-size: 18px; /* Tamanho confortável */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin-bottom: 30px; /* Espaço antes dos botões */
+}
+
+
+.buttons {
+    display: flex; /* Botões lado a lado */
+    gap: 20px; /* Espaço entre eles */
+}
+
+.buttons button {
+    padding: 12px 24px; /* Espaçamento interno */
+    border: none; /* Remove borda */
+    border-radius: 28px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho texto */
+    font-weight: 600; /* Semi-negrito */
+    cursor: pointer; /* Muda cursor */
+    transition: 0.3s; /* Suaviza hover */
+}
+
+/* Botão branco */
+
+.buttons button:first-child {
+    background-color: white;
+    color: #23272a;
+}
+
+.buttons button:first-child:hover {
+    background-color: #e3e3e3;
+}
+
+/* Botão escuro */
+
+.buttons button:last-child {
+    background-color: #23272a;
+    color: white;
+}
+
+.buttons button:last-child:hover {
+    background-color: #36393f;
+}
+
+
+.section {
+    padding: 80px 20px; /* Espaçamento vertical e lateral */
+}
+
+/* Alterna fundo branco nas sections pares */
+
+.section:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px; /* Limite de largura */
+    margin: 0 auto; /* Centraliza */
+    display: flex; /* Ativa Flexbox */
+    align-items: center; /* Alinha vertical */
+    justify-content: space-between; /* Espaço entre imagem e texto */
+    gap: 40px; /* Espaço entre eles */
+}
+
+/* Inverte ordem da section */
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.container img {
+    width: 50%; /* Metade do container */
+    max-width: 600px; /* Limite máximo */
+}
+
+.text {
+    width: 50%;
+}
+
+.text h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container-column {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-column img {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+footer {
+    background-color: #23272a;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column; /* Empilha imagem e texto */
+        text-align: center;
+    }
+
+    .container img,
+    .text {
+        width: 100%; /* Ocupa largura total */
+    }
+
+    header h1 {
+        font-size: 32px; /* Reduz hero */
+    }
+
+    .text h2 {
+        font-size: 28px; /* Reduz títulos */
+    }
+
+    .buttons {
+        flex-direction: column; /* Botões empilhados */
+        width: 100%;
+    }
+
+    .buttons button {
+        width: 100%; /* Botões largura total */
+    }
+}
